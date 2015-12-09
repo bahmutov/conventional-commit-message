@@ -12,7 +12,13 @@ const IGNORED = /^WIP\:/
 const TYPES = {
   feat: true,
   fix: true,
-  chore: true
+  docs: true,
+  style: true,
+  refactor: true,
+  perf: true,
+  test: true,
+  chore: true,
+  revert: true
 }
 
 function parseMessage (str) {

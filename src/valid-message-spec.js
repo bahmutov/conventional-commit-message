@@ -29,6 +29,15 @@ describe('parse message', () => {
     la(parsed.subject === 'new feature', 'subject', parsed)
   })
 
+  it('parses another valid message', () => {
+    const message = 'revert(something): new feature was bad'
+    const parsed = parse(message)
+    la(parsed.firstLine === message, 'first line', parsed)
+    la(parsed.type === 'revert', 'type', parsed)
+    la(parsed.scope === 'something', 'scope', parsed)
+    la(parsed.subject === 'new feature was bad', 'subject', parsed)
+  })
+
   it('rejects invalid message', () => {
     const message = 'free form text'
     const parsed = parse(message)
