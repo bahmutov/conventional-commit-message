@@ -20,8 +20,8 @@ This module can:
 * validate a given message if it fits the above simple format
 * guide the user with questions in order to form well formatted message
 
-This was copied from [validate-commit-msg](https://www.npmjs.com/package/validate-commit-msg)
-and cleaned up slightly to be both a wizard and a validator.
+The validation was copied from [validate-commit-msg](https://www.npmjs.com/package/validate-commit-msg),
+and the wizard is used from [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog).
 
 ## Install and use
 

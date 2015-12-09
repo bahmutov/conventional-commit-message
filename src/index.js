@@ -8,5 +8,5 @@ module.exports = {
   // and from https://github.com/commitizen/cz-conventional-changelog
   parse: require('./valid-message').parse,
   validate: require('./valid-message').validate,
-  prompter: require('./message-wizard').prompter
+  prompter: require('cz-conventional-changelog').prompter
 }
