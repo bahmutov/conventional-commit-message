@@ -9,6 +9,7 @@ const PATTERN = /^((?:fixup!\s*)?(\w*)(\(([\w\$\.\*/-]*)\))?\: (.*))(\n|$)/
 const IGNORED = /^WIP\:/
 
 // simplified types
+// compatibe list with https://github.com/commitizen/conventional-commit-types/
 const TYPES = {
   feat: true,
   fix: true,
@@ -17,6 +18,8 @@ const TYPES = {
   refactor: true,
   perf: true,
   test: true,
+  build: true,
+  ci: true,
   chore: true,
   revert: true
 }
