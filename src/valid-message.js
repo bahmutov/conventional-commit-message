@@ -89,6 +89,5 @@ function validateMessage (message, log) {
 
 module.exports = {
   validate: validateMessage,
-  parse: parseMessage,
-  types: TYPES
+  parse: parseMessage
 }
