@@ -42,7 +42,7 @@
   },
   "config": {
     "pre-git": {
-      "commit-msg": "validate-commit-msg",
+      "commit-msg": "conventional",
       "pre-commit": [
         "npm run ban",
         "npm run lint",

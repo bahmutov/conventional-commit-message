@@ -62,3 +62,21 @@ describe('validate message', () => {
     la(!called, 'error log not called')
   })
 })
+
+describe('validate supported message types', () => {
+  const validate = require('./valid-message').validate
+  const supportedCommitTypes = ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'build', 'ci', 'chore', 'revert']
+
+  supportedCommitTypes.forEach(type => {
+    it(`should be able to successfully parse type: ${type}`, () => {
+      const message = `${type}(foo): cool code`
+
+      var called
+      function log () {
+        called = true
+      }
+      la(validate(message, log), 'message is valid')
+      la(!called, 'error log not called')
+    })
+  })
+})
